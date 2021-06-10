@@ -6,6 +6,9 @@
 
 body {
     font-family: Arial;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
 }
 
 :root {
@@ -165,7 +168,74 @@ form input {
 .botao input:hover {
     box-shadow: 0px 0px 5px #d3d3d4;
 }
+/* ------------------- */
+/* -----Rodape------- */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+}
 
+footer a {
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer_cima {
+    padding: 15px 30px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--sec-bg-color);
+    color: var(--main-bg-color);
+    font-size: 11pt;
+    border-bottom: 1px solid var(--linha-color);
+}
+
+.footer_baixo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding: 18px 10px;
+    font-size: 11pt;
+    background-color:var(--sec-bg-color);
+}
+
+.footer_esq {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+.footer_dir {
+    display: flex;
+    justify-content: space-evenly;
+    width: 350px;
+}
+/* ------------------- */
+
+/* ------Responsividade------ */
+@media (max-width:795px) {
+    .footer_baixo {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .footer_esq {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:575px) {
+  
+}
 
 
 
